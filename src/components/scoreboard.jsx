@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 export default function Scoreboard({ currentScore, maxScore }) {
-    const bestScore = localStorage.getItem('score');
+    const bestScore = Number(localStorage.getItem('score')) || 0;
 
     return (
         <div className="scoreboard">

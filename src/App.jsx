@@ -46,7 +46,7 @@ export default function App() {
   }
 
   function updateBestScore(newScore) {
-    const oldHighScore = parseFloat(localStorage.getItem('score'));
+    const oldHighScore = Number(localStorage.getItem('score') || 0);
     if (oldHighScore === null || oldHighScore < newScore) localStorage.setItem('score', newScore);
   }
 
