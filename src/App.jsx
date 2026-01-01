@@ -7,8 +7,6 @@ import Modal from './components/modal';
 import GitHubFooter from './components/github-footer';
 import './App.css';
 
-const apiKey = import.meta.env.POKEMON_API_KEY;
-
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [pokemon, setPokemon] = useState([]);
@@ -20,22 +18,20 @@ export default function App() {
 
   useEffect(() => {
     setLoading(true);
-    const query = type ? `?q=types:${type}` : '';
-    fetch(`https://api.pokemontcg.io/v2/cards${query}`, {
-      headers: {
-        'X-Api-Key': apiKey,
-        mode: 'cors',
-      }
-    })
+    const query = type ? `?types=${type}` : '';
+    fetch(`https://api.tcgdex.net/v2/en/cards${query}`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetching a data...");
-        const pokemonData = data.data;
+        const pokemonData = data.filter(card => 'image' in card);
         const currentPokemon = shuffleAndSlice(pokemonData, 30);
         setPokemon(currentPokemon);
+        setLoading(false);
       })
-      .catch(err => console.log(err.message));
-      setTimeout(() => setLoading(false), 7000);
+      .catch(err => {
+        console.log(err.message);
+        setLoading(false);
+      });
   }, [type]);
 
   function shuffleAndSlice(arr, difficultyMode) {
