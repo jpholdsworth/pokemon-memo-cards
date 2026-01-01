@@ -11,7 +11,7 @@ export default function PokemonCards({ cards, difficulty, onClick, isFlipped }) 
           className={`pokemon-card ${isFlipped ? 'flipped' : ''}`}
         >
             <div className="front-card">
-              <img src={card.images.small} alt={card.name} />
+              <img src={`${card.image}/high.png`} alt={card.name} />
             </div>
             <div className="back-card" disabled={isFlipped}>
               <img src={BackCard} alt="" />
