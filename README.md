@@ -11,17 +11,19 @@
 
 ![Game responsiveness](/doc/responsive.png)
 
-## Introduction
+## 👋 Introduction
 
-### 🎮 Gameplay Overview
-🏆 **Goal:** Select every unique Pokémon without repeating a choice.
+### Gameplay Overview
+🎯 **Goal:** Select every unique Pokémon without repeating a choice.
 
 The game is designed to be simple to learn while encouraging memory and pattern recognition. 
 
-1. A grid of Pokémon cards is displayed at the start of the game.
-2. Click any card to select it.
-3. After each selection, the cards flip and reshuffle into a new random order.
-4. Clicking a card that has already been selected ends the game and records your best score.
-5. Successfully select every unique card without repeating one to win.
+1. 🃏 A grid of Pokémon cards is displayed at the start of the game.
+2. 👆 Click any card to select it.
+3. 🔀 After each selection, the cards flip and reshuffle into a new random order.
+4. ☠️ Clicking a card that has already been selected ends the game and records your best score.
+5. 🏆 Successfully select every unique card without repeating one to win.
 
 Each round becomes progressively more challenging as players must remember previous selections while adapting to constantly changing card positions.
+
+## ⭐ Project Highlights
