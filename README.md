@@ -12,6 +12,19 @@
 ![Game responsiveness](/doc/responsive.png)
 
 ## 👋 Introduction
+**Pokémon Memory Card Game** is an interactive browser game designed to challenge players' memory and attention through decision making and constantly changing card positions. Inspired by the popularity of Pokémon cards and classic memory games, this project adds a dynamic twist - after every selection, the cards reshuffle, forcing players to rely on recognition rather than position.
+
+### 💡 Why This Project Matters
+This project was created to deepen my understanding of building interactive applications using **React** and modern front-end development principles. The game logic is driven entirely through React hooks, allowing state and UI behaviour to remain predictable and maintainable.
+
+Through this project, I explored key concepts including:
+- `useState` - managing player selections, cards, scores and game progress
+- `useEffect` - handling side effects such as fetching Pokémon data from the **TCGdex API** and reshuffling cards after state updates
+- **Component-based architecture** for reusable UI elements
+- **Event handling** to control gameplay flow
+- **Dynamic rendering** driven by state changes
+
+The result is a fully interactive browser game that demonstrates practical state management and reactive UI design.
 
 ### Gameplay Overview
 🎯 **Goal:** Select every unique Pokémon without repeating a choice.
