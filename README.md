@@ -41,6 +41,7 @@ Each round becomes progressively more challenging as players must remember previ
 
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
+- [Tech Stack](#️-tech-stack)
 
 
 ## 🎯 The Vision
@@ -54,3 +55,13 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 - Implement responsive design across mobile, tablet, and desktop devices
 - Develop clear, maintainable game logic driven by application state
 - Deploy a fully functional, production-ready web application
+
+## 🛠️ Tech Stack
+| Category | Technology | Purpose |
+| --- | --- | --- |
+| **Frontend** | React | Component-based UI, state management and dynamic rendering |
+| **State Management** | `useState` / `useEffect` | Handle card selections, scores, card shuffling and game progress |
+| **Styling** | CSS3 / Flexbox / Grid | Layout, responsive design and card animations |
+| **Data** | TCGdex API | Fetch Pokémon names and artwork dynamically |
+| **Deployment** | Netlify | Hosting the live game |
+| **Development Tools** | VSCode | Local development and code editing |
