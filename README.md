@@ -39,4 +39,18 @@ The game is designed to be simple to learn while encouraging memory and pattern 
 
 Each round becomes progressively more challenging as players must remember previous selections while adapting to constantly changing card positions.
 
-## ⭐ Project Highlights
+## 📑 Table of Contents
+- [The Vision](#-the-vision)
+
+
+## 🎯 The Vision
+The primary goal of this project was to build an engaging and fully playable memory card game that combines clean UI design with structured game logic and dynamic interactivity.
+
+Rather than relying on external game engines or heavy frameworks, the project focuses on implementing core front-end concepts using React, emphasising predictable state management, reusable components, and a responsive user experience.
+
+**Key objectives:**
+- Build a functional memory game from scratch using React
+- Fetch and display Pokémon data dynamically via an external API
+- Implement responsive design across mobile, tablet, and desktop devices
+- Develop clear, maintainable game logic driven by application state
+- Deploy a fully functional, production-ready web application
