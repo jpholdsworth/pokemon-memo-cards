@@ -161,9 +161,8 @@ http://localhost:5173
 ## üêõ Development Log
 During development, several notable issues were encountered and resolved. Here‚Äôs a summary of the key challenges and learnings:
 
----
-
 1. API Fetch Performance Optimisation
+
     Commit: [`ebad6de`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/ebad6de)
 
     **Issue:**
@@ -217,10 +216,10 @@ During development, several notable issues were encountered and resolved. Here‚Ä
     **Learning:**
     Switching to a more suitable API and removing unnecessary logic significantly improved loading performance. This not only enhanced the user experience but also simplified state management for the app.
 
----
-
 2. localStorage Not Persisting Best Score
+
     Commit: [`bab0d17`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/bab0d17)
+
     **Issue:**
     The game was not correctly persisting the high score. On game start, `localStorage` returned `null`, causing the best score to fail to display.
     
@@ -245,8 +244,6 @@ During development, several notable issues were encountered and resolved. Here‚Ä
     
     **Learning:**
     Even small bugs like this require thinking beyond default behaviour and considering edge cases. Always check for `null` or undefined values when using  browser storage.
-
----
 
 3. `gameMode` State Refactor
     Commit: [`f74a5e5`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/f74a5e5)
