@@ -246,6 +246,7 @@ During development, several notable issues were encountered and resolved. Hereâ€
     Even small bugs like this require thinking beyond default behaviour and considering edge cases. Always check for `null` or undefined values when using  browser storage.
 
 3. `gameMode` State Refactor
+
     Commit: [`f74a5e5`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/f74a5e5)
 
     **Issue:**
