@@ -26,6 +26,10 @@ Through this project, I explored key concepts including:
 
 The result is a fully interactive browser game that demonstrates practical state management and reactive UI design.
 
+### 📹 Gameplay Preview
+[Watch Gameplay](/doc/gameplay.mp4)
+*Video shows a live demo of reshuffling cards and score tracking*
+
 ### Gameplay Overview
 🎯 **Goal:** Select every unique Pokémon without repeating a choice.
 
