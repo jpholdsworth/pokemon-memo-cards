@@ -276,3 +276,14 @@ During development, several notable issues were encountered and resolved. Here�
     
     **Learning:**
     Experimenting with state shape can improve clarity and maintainability. Don't be afraid to change the data structure of a state value if it makes the logic more intuitive and easier to manage.
+
+## 📜 License
+This project is licensed under the [MIT License](https://mit-license.org/).
+
+---
+
+<div align="center">
+**Made with ❤️ and ☕ by Jacob Holdsworth.**
+    
+[👆 Back to Top](#-pokémon-memory-card-game)
+</div>
