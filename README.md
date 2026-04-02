@@ -41,6 +41,8 @@ Each round becomes progressively more challenging as players must remember previ
 
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
+- [Features](#-features)
+- [Getting Started](#-getting-started)
 - [Tech Stack](#️-tech-stack)
 
 
@@ -55,6 +57,46 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 - Implement responsive design across mobile, tablet, and desktop devices
 - Develop clear, maintainable game logic driven by application state
 - Deploy a fully functional, production-ready web application
+
+## ✨ Features
+- 🎴 **Dynamic Memory Gameplay** - select unique Pokémon cards without repeating previous choices
+- 🔀 **Automatic Card Reshuffling** - cards randomise after every selection, increasing difficulty
+- 💫 **Card Flip Animations** - smooth CSS transitions provide visual feedback after each selection
+- 🧠 **Score Tracking System** - tracks current score and records the best score achieved
+- ⚛️ **State-Driven Gameplay** - game logic fully managed using React hooks
+- 🌐 **Live API Integration** - Pokémon data dynamically fetched from the TCGdex API
+- 📱 **Fully Responsive Design** - optimised for mobile, tablet, and desktop devices
+- ⚡ **Fast and Lightweight** - client-side rendering with minimal dependencies
+- 🎨 **Interactive UI Feedback** - responsive visual interactions enhance player engagement
+
+## 🚀 Getting Started
+
+> ⚡ **Quick Start:** `npm install && npm run dev`
+
+### Prerequisites
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- **npm** (included with Node.js)
+
+### Installation & Setup
+1. Clone the repository
+```bash
+git clone https://git@github.com:jpholdsworth/pokemon-memo-cards.git
+cd pokemon-memo-cards
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Start the development server
+```bash
+npm run dev
+```
+4. Open your browser and visit 
+```
+http://localhost:5173
+```
+
 
 ## 🛠️ Tech Stack
 | Category | Technology | Purpose |
