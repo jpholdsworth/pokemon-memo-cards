@@ -42,9 +42,9 @@ Each round becomes progressively more challenging as players must remember previ
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
 - [Features](#-features)
+- [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
 - [Tech Stack](#️-tech-stack)
-
 
 ## 🎯 The Vision
 The primary goal of this project was to build an engaging and fully playable memory card game that combines clean UI design with structured game logic and dynamic interactivity.
@@ -66,12 +66,59 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 - ⚛️ **State-Driven Gameplay** - game logic fully managed using React hooks
 - 🌐 **Live API Integration** - Pokémon data dynamically fetched from the TCGdex API
 - 📱 **Fully Responsive Design** - optimised for mobile, tablet, and desktop devices
-- ⚡ **Fast and Lightweight** - client-side rendering with minimal dependencies
+- ⚡ **Fast and Lightweight** - built with Vite for rapid development and optimised performance
 - 🎨 **Interactive UI Feedback** - responsive visual interactions enhance player engagement
 
-## 🚀 Getting Started
+## 🏗️ Architecture
+### Component Structure 
+- **App** – Manages API fetch, global game state, and overall application flow.
+- **Loading** – Displays a loading state while Pokémon data is fetched.
+- **Modal** – Shows end-of-game messages and scores.
+- **PokemonCards** – Reusable component for rendering individual Pokémon cards and handling clicks.
+- **Scoreboard** - Displays current score and best score dynamically.
 
-> ⚡ **Quick Start:** `npm install && npm run dev`
+### State Management
+Game state is fully managed using React hooks:
+
+- `useState` tracks selected cards, current score, best score, and gameplay status.
+- `useEffect` handles side effects such as fetching Pokémon data from the TCGdex API and filtering it before storing in state.
+
+State updates drive UI changes, ensuring predictable and reactive gameplay behaviour.
+
+### Data Flow
+1. Pokémon data is fetched from the TCGdex API based on the user's Pokémon type selection.
+2. The data is filtered and stored in application state.
+3. Cards are dynamically rendered from state.
+4. User interactions update state and trigger reshuffling logic.
+5. The UI re-renders automatically based on updated state, providing immediate feedback to the player.
+
+### File Structure
+```
+src/
+├── assets
+│   ├── font
+│   └── image
+├── components 
+│   ├── game-interface.jsx
+│   ├── loading.jsx
+│   ├── pokemon-cards.jsx
+│   └── scoreboard.jsx
+├── style
+│   ├── game-interface.css
+│   ├── loading.css
+│   └── navigation.css
+├── app.jsx
+└── main.jsx
+```
+
+### Key Principles
+- Separation of Concerns - JSX components and logic are clearly separated from styling (CSS).
+- Component reusability - Each UI element is modular and reusable.
+- Predictable State - Application state drives UI rendering, ensuring consistent and reliable gameplay.
+- Responsive Design - Layout adjusts seamlessly across mobile, tablet and desktop devices.
+
+## 🚀 Getting Started
+⚡ **Quick Start:** `npm install && npm run dev`
 
 ### Prerequisites
 Make sure you have the following installed:
@@ -81,7 +128,7 @@ Make sure you have the following installed:
 ### Installation & Setup
 1. Clone the repository
 ```bash
-git clone https://git@github.com:jpholdsworth/pokemon-memo-cards.git
+git clone https://github.com/jpholdsworth/pokemon-memo-cards.git
 cd pokemon-memo-cards
 ```
 2. Install dependencies
@@ -96,7 +143,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
 
 ## 🛠️ Tech Stack
 | Category | Technology | Purpose |
