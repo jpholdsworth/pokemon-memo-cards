@@ -157,3 +157,124 @@ http://localhost:5173
 | **Data** | TCGdex API | Fetch Pokémon names and artwork dynamically |
 | **Deployment** | Netlify | Hosting the live game |
 | **Development Tools** | VSCode | Local development and code editing |
+
+## 🐛 Development Log
+During development, several notable issues were encountered and resolved. Here’s a summary of the key challenges and learnings:
+
+---
+
+1. API Fetch Performance Optimisation
+    Commit: [`ebad6de`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/ebad6de)
+
+    **Issue:**
+    Initially, the [PokémonTCG API](https://docs.pokemontcg.io/) was used to fetch card data. Over time, the API response grew larger due to updates, causing the loading screen to stall indefinitely. A `setTimeout` was used to fake a loading delay, which was inefficient and unreliable.
+    
+    ```jsx
+    useEffect(() => {
+        setLoading(true);
+        const query = type ? `?q=types:${type}` : '';
+        fetch(`https://api.pokemontcg.io/v2/cards${query}`, {
+          headers: {
+            'X-Api-Key': apiKey,
+            mode: 'cors',
+          }
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log("Fetching a data...");
+            const pokemonData = data.data;
+            const currentPokemon = shuffleAndSlice(pokemonData, 30);
+            setPokemon(currentPokemon);
+          })
+          .catch(err => console.log(err.message));
+          setTimeout(() => setLoading(false), 7000);
+      }, [type]);
+    ```
+    
+    **Solution:**
+    Switched to the [TCGdex API](https://tcgdex.dev/), which provides more manageable data. Removed the `setTimeout` and instead updated the loading state immediately after fetching data or on error, improving efficiency and user experience.
+    
+    ```jsx
+    useEffect(() => {
+        setLoading(true);
+        const query = type ? `?types=${type}` : '';
+        fetch(`https://api.tcgdex.net/v2/en/cards${query}`)
+          .then(response => response.json())
+          .then(data => {
+            console.log("Fetching a data...");
+            const pokemonData = data.filter(card => 'image' in card);
+            const currentPokemon = shuffleAndSlice(pokemonData, 30);
+            setPokemon(currentPokemon);
+            setLoading(false);
+          })
+          .catch(err => {
+            console.log(err.message);
+            setLoading(false);
+          });
+      }, [type]);
+    ```
+    
+    **Learning:**
+    Switching to a more suitable API and removing unnecessary logic significantly improved loading performance. This not only enhanced the user experience but also simplified state management for the app.
+
+---
+
+2. localStorage Not Persisting Best Score
+    Commit: [`bab0d17`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/bab0d17)
+    **Issue:**
+    The game was not correctly persisting the high score. On game start, `localStorage` returned `null`, causing the best score to fail to display.
+    
+    ```jsx
+    // App.jsx
+    const oldHighScore = parseFloat(localStorage.getItem('score'));
+    
+    // scoreboard.jsx
+    const bestScore = localStorage.getItem('score');
+    ```
+    
+    **Solution:**
+    Updated the logic to safely convert the stored value to a number, defaulting to `0` if no value exists. This ensures a valid number is always available for display and comparison.
+    
+    ```jsx
+    // App.jsx
+    const oldHighScore = Number(localStorage.getItem('score') || 0);
+    
+    // scoreboard.jsx
+    const bestScore = Number(localStorage.getItem('score')) || 0;
+    ```
+    
+    **Learning:**
+    Even small bugs like this require thinking beyond default behaviour and considering edge cases. Always check for `null` or undefined values when using  browser storage.
+
+---
+
+3. `gameMode` State Refactor
+    Commit: [`f74a5e5`](https://github.com/jpholdsworth/pokemon-memo-cards/commit/f74a5e5)
+
+    **Issue:**
+    The `gameMode` state was a simple string, which made the application flow harder to follow and less descriptive when controlling game logic.
+
+    ```jsx
+    const [gameMode, setGameMode] = useState('menu');
+    ```
+    
+    **Solution:**
+    Refactored `gameMode` into an object with multiple properties, improving readability and providing clearer control over game flow.
+    
+    ```jsx
+    const [gameMode, setGameMode] = useState({
+      status: 'menu',
+      gameOver: false,
+      win: false,
+    });
+    ```
+    
+    The object now contains:
+    - `status` - a string representing the current game phase
+    - `gameOver` - boolean indicating whether the game has ended
+    - `win` - boolean indicating if the player won
+    
+    This makes it easier to manage end-of-game messages and gameplay logic.
+    
+    **Learning:**
+    Experimenting with state shape can improve clarity and maintainability. Don't be afraid to change the data structure of a state value if it makes the logic more intuitive and easier to manage.
