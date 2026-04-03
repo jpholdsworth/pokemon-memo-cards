@@ -46,7 +46,7 @@ Each round becomes progressively more challenging as players must remember previ
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
 - [Features](#-features)
-- [UI/UX Decisions](#-uiux-decisions)
+- [Design Choices](#-design-choices)
 - [Architecture](#-architecture)
 - [Tech Stack](#️-tech-stack)
 - [Getting Started](#-getting-started)
@@ -79,7 +79,44 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 - ⚡ **Fast and Lightweight** - built with Vite for rapid development and optimised performance
 - 🎨 **Interactive UI Feedback** - responsive visual interactions enhance player engagement
 
-## 🎨 UI/UX Decisions 
+## 🎨 Design Choices
+The design is inspired by a blend of retro Pokémon games and modern Pokémon cards, aiming to balance nostalgia, personality, and thematic coherence.
+
+### Colour Palette
+The game uses dusk tones and darker backgrounds, complemented by white accents to create a calming atmosphere. Each Pokémon type has its own distinct color, helping cards stand out and making it easier for players to differentiate types at a glance. 
+
+### Typography
+The custom font `Bebas Neue`, inspired by retro Pokémon game styles, was chosen for its readability and playful character. This ensures a consistent theme while maintaining legibility across devices.
+
+### Layout
+The interface is structured with a clean menu for selecting Pokémon types before starting the game. Grid size varies depending on the chosen difficulty, with more cards displayed for higher difficulty levels. Each difficulty level has a different grid layout and number of rows, maintaining challenge balance while keeping the UI clear.
+
+| Easy | Medium | Hard |
+| --- | --- | --- |
+| [](/doc/easy-difficulty.png) | [](/doc/medium-difficulty.png) | [](/doc/hard-difficulty.png) |
+
+### UI/UX
+**Controls:** The bottom of the page features two buttons—one to reset the game and another (?) to explain the rules—providing quick access to key actions.
+
+| Before | After | 
+| --- | --- |
+| [](/doc/new-game.png) | [](/doc/query.png) | 
+
+**Selection Feedback:** Difficulty and type selections highlight visually which options have been chosen, helping players confirm their choices.
+
+| Difficulty Selection | Type Selection | 
+| --- | --- |
+| [](/doc/difficulty-selection.png) | [](/doc/pokemon-type-selection.png) | 
+
+**Loading Feedback:** After selections, a calming circular loading animation of a spinning orange Charizard appears while data is fetched from the API, enhancing engagement and user experience.
+
+[](/doc/loading-screen.gif)
+
+**End Game Feedback:** Players receive clear feedback at the conclusion of a game. The results indicate whether the user has won or lost, accompanied by meaningful visual cues to reinforce achievement or learning from the attempt.
+
+| Win the Game | Lose the Game | 
+| --- | --- |
+| [](/doc/end-game-win.png) | [](/doc/game-over.png) | 
 
 ## 🏗️ Architecture
 ### Component Structure 
