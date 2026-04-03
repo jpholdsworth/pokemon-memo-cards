@@ -83,7 +83,7 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 The design is inspired by a blend of retro Pokémon games and modern Pokémon cards, aiming to balance nostalgia, personality, and thematic coherence.
 
 ### Colour Palette
-The game uses dusk tones and darker backgrounds, complemented by white accents to create a calming atmosphere. Each Pokémon type has its own distinct color, helping cards stand out and making it easier for players to differentiate types at a glance. 
+The game uses dusk tones and darker backgrounds, complemented by white accents to create a calming atmosphere. Each Pokémon type has its own distinct colour, helping cards stand out and making it easier for players to differentiate types at a glance. 
 
 ### Typography
 The custom font `Bebas Neue`, inspired by retro Pokémon game styles, was chosen for its readability and playful character. This ensures a consistent theme while maintaining legibility across devices.
@@ -93,7 +93,7 @@ The interface is structured with a clean menu for selecting Pokémon types befor
 
 | Easy | Medium | Hard |
 | --- | --- | --- |
-| ![](/doc/easy-difficulty.png) | ![](/doc/medium-difficulty.png) | !![](/doc/hard-difficulty.png) |
+| ![](/doc/easy-difficulty.png) | ![](/doc/medium-difficulty.png) | ![](/doc/hard-difficulty.png) |
 
 ### UI/UX
 **Controls:** The bottom of the page features two buttons—one to reset the game and another (?) to explain the rules—providing quick access to key actions.
@@ -183,7 +183,7 @@ src/
 
 ### Prerequisites
 Make sure you have the following installed:
-- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- [Node.js](https://nodejs.org/) (v20.19 or v22.12+ or higher)
 - **npm** (included with Node.js)
 
 ### Installation & Setup
@@ -290,7 +290,7 @@ During development, several notable issues were encountered and resolved. Here�
     ```
     
     **Learning:**
-    Even small bugs like this require thinking beyond default behaviour and considering edge cases. Always check for `null` or undefined values when using  browser storage.
+    Even small bugs like this require thinking beyond default behaviour and considering edge cases. Always check for `null` or undefined values when using browser storage.
 
 3. `gameMode` State Refactor
 
@@ -351,7 +351,7 @@ This project is licensed under the [MIT License](https://mit-license.org/).
 ---
 
 <div align="center">
-**Made with ❤️ and ☕ by Jacob Holdsworth.**
+ <strong>Made with ❤️ and ☕ by Jacob Holdsworth.</strong>
     
-[👆 Back to Top](#-pokémon-memory-card-game)
+  [👆 Back to Top](#-pokémon-memory-card-game)
 </div>
