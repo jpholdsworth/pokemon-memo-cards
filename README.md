@@ -46,10 +46,12 @@ Each round becomes progressively more challenging as players must remember previ
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
 - [Features](#-features)
+- [UI/UX Decisions](#-uiux-decisions)
 - [Architecture](#-architecture)
-- [Getting Started](#-getting-started)
 - [Tech Stack](#️-tech-stack)
+- [Getting Started](#-getting-started)
 - [Development Log](#-development-log)
+- [Challenges & Learnings](#challenges--learnings)
 - [Future Improvements](#-future-improvements)
 - [Acknowledgements](#-acknowledgements)
 - [License](#-license)
@@ -76,6 +78,8 @@ Rather than relying on external game engines or heavy frameworks, the project fo
 - 📱 **Fully Responsive Design** - optimised for mobile, tablet, and desktop devices
 - ⚡ **Fast and Lightweight** - built with Vite for rapid development and optimised performance
 - 🎨 **Interactive UI Feedback** - responsive visual interactions enhance player engagement
+
+## 🎨 UI/UX Decisions 
 
 ## 🏗️ Architecture
 ### Component Structure 
@@ -125,6 +129,16 @@ src/
 - Predictable State - Application state drives UI rendering, ensuring consistent and reliable gameplay.
 - Responsive Design - Layout adjusts seamlessly across mobile, tablet and desktop devices.
 
+## 🛠️ Tech Stack
+| Category | Technology | Purpose |
+| --- | --- | --- |
+| **Frontend** | React | Component-based UI, state management and dynamic rendering |
+| **State Management** | `useState` / `useEffect` | Handle card selections, scores, card shuffling and game progress |
+| **Styling** | CSS3 / Flexbox / Grid | Layout, responsive design and card animations |
+| **Data** | TCGdex API | Fetch Pokémon names and artwork dynamically |
+| **Deployment** | Netlify | Hosting the live game |
+| **Development Tools** | VSCode | Local development and code editing |
+
 ## 🚀 Getting Started
 ⚡ **Quick Start:** `npm install && npm run dev`
 
@@ -151,16 +165,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
-## 🛠️ Tech Stack
-| Category | Technology | Purpose |
-| --- | --- | --- |
-| **Frontend** | React | Component-based UI, state management and dynamic rendering |
-| **State Management** | `useState` / `useEffect` | Handle card selections, scores, card shuffling and game progress |
-| **Styling** | CSS3 / Flexbox / Grid | Layout, responsive design and card animations |
-| **Data** | TCGdex API | Fetch Pokémon names and artwork dynamically |
-| **Deployment** | Netlify | Hosting the live game |
-| **Development Tools** | VSCode | Local development and code editing |
 
 ## 🐛 Development Log
 During development, several notable issues were encountered and resolved. Here’s a summary of the key challenges and learnings:
@@ -280,6 +284,8 @@ During development, several notable issues were encountered and resolved. Here�
     
     **Learning:**
     Experimenting with state shape can improve clarity and maintainability. Don't be afraid to change the data structure of a state value if it makes the logic more intuitive and easier to manage.
+
+## Challenges & Learnings
 
 ## 🔮 Future Improvements
 - [ ] Add a timer and optional countdown mode to introduce additional gameplay challenge
