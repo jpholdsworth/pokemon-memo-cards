@@ -3,6 +3,8 @@
 ## 🌐 Live Demo
 👉 [Play the Game](https://pokemon-tcg-memo-cards.netlify.app/)
 
+Play instantly in your browser - no installation required.
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white)
@@ -30,7 +32,7 @@ The result is a fully interactive browser game that demonstrates practical state
 ![Watch Gameplay](/doc/gameplay.gif)
 *Video shows a live demo of reshuffling cards and score tracking*
 
-### Gameplay Overview
+### 🎮 Gameplay Overview
 🎯 **Goal:** Select every unique Pokémon without repeating a choice.
 
 The game is designed to be simple to learn while encouraging memory and pattern recognition. 
@@ -171,10 +173,10 @@ src/
 </details>
 
 ### Key Principles
-- Separation of Concerns - JSX components and logic are clearly separated from styling (CSS).
-- Component reusability - Each UI element is modular and reusable.
-- Predictable State - Application state drives UI rendering, ensuring consistent and reliable gameplay.
-- Responsive Design - Layout adjusts seamlessly across mobile, tablet and desktop devices.
+- **Separation of Concerns** - JSX components and logic are clearly separated from styling (CSS).
+- **Component reusability** - Each UI element is modular and reusable.
+- **Predictable State** - Application state drives UI rendering, ensuring consistent and reliable gameplay.
+- **Responsive Design** - Layout adjusts seamlessly across mobile, tablet and desktop devices.
 
 ## 🛠️ Tech Stack
 | Category | Technology | Purpose |
@@ -270,7 +272,7 @@ useEffect(() => {
 ```
 
 **Learning:**
-Switching to a more suitable API and removing unnecessary logic significantly improved loading performance. This not only enhanced the user experience but also simplified statemanagement for the app.
+Switching to a more suitable API and removing unnecessary logic significantly improved loading performance. This not only enhanced the user experience but also simplified state management for the app.
 
 </details>
 
@@ -373,7 +375,7 @@ This project is licensed under the [MIT License](https://mit-license.org/).
 ---
 
 <div align="center">
- <strong>Made with ❤️ and ☕ by Jacob Holdsworth.</strong>
+ <strong>Built with ❤️, ☕ and ⚛️ by Jacob Holdsworth.</strong>
     
   [👆 Back to Top](#-pokémon-memory-card-game)
 </div>
