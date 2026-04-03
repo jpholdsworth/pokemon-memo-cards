@@ -93,30 +93,30 @@ The interface is structured with a clean menu for selecting Pokémon types befor
 
 | Easy | Medium | Hard |
 | --- | --- | --- |
-| [](/doc/easy-difficulty.png) | [](/doc/medium-difficulty.png) | [](/doc/hard-difficulty.png) |
+| ![](/doc/easy-difficulty.png) | ![](/doc/medium-difficulty.png) | !![](/doc/hard-difficulty.png) |
 
 ### UI/UX
 **Controls:** The bottom of the page features two buttons—one to reset the game and another (?) to explain the rules—providing quick access to key actions.
 
 | Before | After | 
 | --- | --- |
-| [](/doc/new-game.png) | [](/doc/query.png) | 
+| ![](/doc/new-game.png) | ![](/doc/query.png) | 
 
 **Selection Feedback:** Difficulty and type selections highlight visually which options have been chosen, helping players confirm their choices.
 
 | Difficulty Selection | Type Selection | 
 | --- | --- |
-| [](/doc/difficulty-selection.png) | [](/doc/pokemon-type-selection.png) | 
+| ![](/doc/difficulty-selection.png) | ![](/doc/pokemon-type-selection.png) | 
 
 **Loading Feedback:** After selections, a calming circular loading animation of a spinning orange Charizard appears while data is fetched from the API, enhancing engagement and user experience.
 
-[](/doc/loading-screen.gif)
+![](/doc/loading-screen.gif)
 
 **End Game Feedback:** Players receive clear feedback at the conclusion of a game. The results indicate whether the user has won or lost, accompanied by meaningful visual cues to reinforce achievement or learning from the attempt.
 
 | Win the Game | Lose the Game | 
 | --- | --- |
-| [](/doc/end-game-win.png) | [](/doc/game-over.png) | 
+| ![](/doc/end-game-win.png) | ![](/doc/game-over.png) | 
 
 ## 🏗️ Architecture
 ### Component Structure 
