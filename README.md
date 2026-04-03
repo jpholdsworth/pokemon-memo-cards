@@ -110,7 +110,9 @@ The interface is structured with a clean menu for selecting Pokémon types befor
 
 **Loading Feedback:** After selections, a calming circular loading animation of a spinning orange Charizard appears while data is fetched from the API, enhancing engagement and user experience.
 
-![](/doc/loading-screen.gif)
+<div align="center">
+  <img src="/doc/loading-screen.gif" alt="Loading Screen"/>
+</div>
 
 **End Game Feedback:** Players receive clear feedback at the conclusion of a game. The results indicate whether the user has won or lost, accompanied by meaningful visual cues to reinforce achievement or learning from the attempt.
 
