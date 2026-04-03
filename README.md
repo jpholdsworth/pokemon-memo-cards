@@ -285,7 +285,12 @@ During development, several notable issues were encountered and resolved. Here�
     **Learning:**
     Experimenting with state shape can improve clarity and maintainability. Don't be afraid to change the data structure of a state value if it makes the logic more intuitive and easier to manage.
 
-## Challenges & Learnings
+## 🚧 Challenges & Learnings
+- Handling external APIs taught me to manage inconsistent data and loading states efficiently.
+- Learned how to structure React components to separate game logic from UI rendering.
+- Gained deeper understanding of state management when tracking player interactions with cards.
+- Improved skills in designing responsive layouts for mobile, tablet, and desktop screens.
+- Realised the importance of clear feedback and animations to enhance user experience.
 
 ## 🔮 Future Improvements
 - [ ] Add a timer and optional countdown mode to introduce additional gameplay challenge
