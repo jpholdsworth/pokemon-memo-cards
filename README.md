@@ -49,6 +49,10 @@ Each round becomes progressively more challenging as players must remember previ
 - [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
 - [Tech Stack](#️-tech-stack)
+- [Development Log](#-development-log)
+- [Future Improvements](#-future-improvements)
+- [Acknowledgements](#-acknowledgements)
+- [License](#-license)
 
 ## 🎯 The Vision
 The primary goal of this project was to build an engaging and fully playable memory card game that combines clean UI design with structured game logic and dynamic interactivity.
@@ -277,8 +281,22 @@ During development, several notable issues were encountered and resolved. Here�
     **Learning:**
     Experimenting with state shape can improve clarity and maintainability. Don't be afraid to change the data structure of a state value if it makes the logic more intuitive and easier to manage.
 
+## 🔮 Future Improvements
+- [ ] Add a timer and optional countdown mode to introduce additional gameplay challenge
+- [ ] Improve accessibility with ARIA labels and full keyboard navigation support
+- [ ] Add victory animations and enhanced visual feedback when the player wins
+- [ ] Introduce optional sound effects for card interactions and game outcomes
+- [ ] Add unit testing for core game logic using React Testing Library
+
+## 🙏 Acknowledgements
+I would like to thank my parents and friends for their valuable feedback, which helped improve the overall user experience and gameplay interactions.
+
+I would also like to acknowledge the creators of the [TCGdex API](https://tcgdex.dev/) for providing free and accessible Pokémon card data and artwork used in this project.
+
 ## 📜 License
 This project is licensed under the [MIT License](https://mit-license.org/).
+
+> *Pokémon and all related names, images and trademarks are the property of Nintendo, Game Freak and The Pokémon Company. This project is a non-commercial fan project created for educational and portfolio purposes only.*
 
 ---
 
